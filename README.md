@@ -1,1 +1,0 @@
-# GDMA-2662-Exercise-8
