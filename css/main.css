@@ -34,36 +34,88 @@
 }
 
 html {
-
-}
-
-@media screen and (min-width: 768px) {
-    html {
-
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    html {
-        
-    }
+    font-size: 1rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #3F3C45;
 }
 
 /*--------------------------------------------------------------
     4.0 - ELEMENTS
 -------------------------------------------------------------- */
 
+h1,
+#home p:last-child {
+    font-weight: 400;
+}
 
+/* ----- TYPOGRAPHY ----- */ 
+
+h1 {
+    font-size: 3rem;
+    margin: 2.5em 0 .1em;
+}
+
+h2  {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 2em 0 0;
+    padding: 15px 30px;
+    color: #1EA78D;
+    display: inline-block;
+    border-bottom: 1.5px solid #717982;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin: 2em 0 1em;
+    color: #1E1E1E;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.7em;
+    margin: 0;
+    color: #717982;
+}
+
+#features .wrapper > header,
+#work {
+    text-align: center;
+}
 
 @media screen and (min-width: 768px) {
 
+    h1 {
+        font-size: 3.5rem;
+    }
+  
+    h2 {
+        font-size: 2rem;
+        margin-top: 2em;
+    }
 
+    h3 {
+        font-size: 1.4rem;
+    }
 }
 
 @media screen and (min-width: 1024px) {
 
+    h1 {
+        font-size: 4.5rem;
+    }
   
+    h2 {
+        font-size: 2rem;
+        margin-top: 2em;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
 }
+
 
 /*--------------------------------------------------------------
     5.0 - OBJECTS
@@ -260,10 +312,234 @@ html {
     6.0 - COMPONENTS
 -------------------------------------------------------------- */
 
+#home,
+#home p,
+nav a,
+footer,
+footer p,
+footer a  {
+    color: #fff;
+}
+
+#home p:last-child:before,
+#home p:last-child:after,
+footer {
+    background-color: #1EA78D;
+}
+
+nav ,
+nav ul,
+footer ul {
+    padding: 0;
+}
+
+nav ul,
+footer ul {
+    margin: 0;
+}
+
+nav li,
+#home p:last-child,
+footer li {
+    display: inline-block;
+}
+
+/* ----- HOME ----- */
+
+#home {
+    text-align: center;
+    background-color: #104F41;
+}
+
+/* #home div {
+    position: fixed;
+    top: 0;
+    left: 0;
+} */
+
+#home div:first-child {
+    background-color: #10443F;
+}
+
+#home p {
+    font-size: 1.5rem;
+    margin: 0 0 .5em;
+    font-weight: 300;
+}
+
+#home p:last-child {
+    font-size: 1.2rem;
+    margin-bottom: 4em;
+}
+
+nav li {
+    padding: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+#home span {
+    font-weight: 300;
+    color: #1EA78D;
+}
+
+#home p:last-child {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#home p:last-child:before,
+#home p:last-child:after {
+    content: '';
+    width: 25px;
+    height: 2px;
+    display: block;
+    position: absolute;
+    top: 16px;
+}
+
+#home p:last-child:before {
+    left: -45px;
+}
+
+#home p:last-child:after {
+    right: -45px;
+}
+
+@media screen and (min-width: 768px) {
+
+    #home div .col-lg-6 {
+        text-align: left;
+    }
+
+    #home nav ul {
+        text-align: right;
+    }
+
+    #home li {
+        padding: 10px 0 0 25px;
+    }
+
+    #home p {
+        font-size: 2.1rem;
+        line-height: 1em;
+    }
+
+    #home p:last-child {
+        margin-bottom: 5em;
+    }
+
+    #home p:last-child:before {
+        top: 10px;
+        left: -45px;
+    }
+    
+    #home p:last-child:after {
+        top: 10px;
+        right: -45px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    #home div .col-lg-6 {
+        text-align: left;
+    }
+
+    #home nav ul {
+        text-align: right;
+    }
+
+    #home li {
+        padding: 10px 0 0 30px;
+    }
+
+    #home p {
+        font-size: 3rem;
+        line-height: 1em;
+    }
+}
+
+/* ----- FEATURES ----- */
+
+#features {
+    background-color: #F4F7F9;
+}
+
+#features section:last-child {
+    margin: 0 0 3em;
+}
+
+/* ----- WORK ----- */
+
+#work {
+    font-weight: 700;
+}
+
+#work p {
+    color: #717982;
+}
+
+#work .row {
+    margin: 0 0 3em;
+}
+
+@media screen and (min-width: 768px) {
+    #work .row {
+        margin: 0 0 5em;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #work .row {
+        margin: 0 0 6em;
+    }
+}
+
+/* ----- FOOTER ----- */
+
+footer {
+    border-top: 5px solid #10443F;
+}
+
+footer b {
+    display: none;
+}
+footer ul {
+    list-style-type: none;
+    font-style: normal;
+}
+
+footer p {
+    font-size: .9rem;
+    margin: 1.5em 0 .8em;
+}
+
+footer li {
+    padding-right: 5px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer div {
+    margin: 3em 0;
+}
 
 /*--------------------------------------------------------------
     7.0 - UTILITY
 -------------------------------------------------------------- */
+
+/* ----- LOGO ----- */
+
+img {
+    width: 6.25em;
+    padding: 0;
+}
 
 /* ----- ALIGNMENT ----- */
 

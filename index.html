@@ -8,20 +8,24 @@
 <link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="css/main.css">
 
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
 
-<title></title>
+
+<title>Brandi</title>
 
 </head>
 <body>
 
-    <header id="home"> <!--apply light green-->
-        <div> <!--apply dark green and position fixed-->
-            <div class="wrapper row">
-                <div class="col-sm-4 col-md-4 col-lg-6">
-                    <img src="img/logo-brandi.jpg" alt="Brandi">
+    <header id="home">
+        <div> <!--position fixed-->
+            <div class="wrapper row col-center">
+                <div class="col-sm-4 col-md-6 col-lg-6">
+                    <img src="img/logo-brandi.png" alt="Brandi" data-rjs="2">
                 </div>
 
-                <nav class="col-sm-12 col-md-8 col-lg-6">
+                <nav class="col-sm-12 col-md-6 col-lg-6">
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#features">Features</a></li>
@@ -31,10 +35,10 @@
                 </nav>
             </div>
         </div>
-        <div class="wrapper"> <!--text align center-->
+        <div class="wrapper"> 
             <h1>Meet <b>Responsive</b>!</h1>
-            <p><span>&sol;fancy</span>ways to resize content</p>
-            <p><!--putting in dashes on monday-->Welcome to the future</p>
+            <p><span>&sol;fancy</span> ways to resize content</p>
+            <p>Welcome to the future</p>
         </div>
 
     </header>
@@ -42,27 +46,27 @@
     <main>
         <section id="features">
             <div class="wrapper">
-                <header><!--text align center-->
-                    <h2>Features</h2><!--inline-block,padding,border-bottom-->
+                <header>
+                    <h2>Features</h2>
                 </header>
                 <div class="row">
                     <section class="col-sm-12 col-lg-4">
                         <header>
-                            <h3>Branding</h3>
+                            <h3>Fluid Layout</h3>
                         </header>
                         <p>In a fluid layout, the page area and its grid resize proportionally to fill the available width of the screen or window. That is easily accomplished with <b>percentages</b>! You can also rely on flex, without a width, or in the future CSS Grid when it's more widely supported.</p>
                     </section>
 
                     <section class="col-sm-12 col-lg-4">
                         <header>
-                            <h3>Development</h3>
+                            <h3>Flexible Images</h3>
                         </header>
                         <p>Every now and then a solution is simple. Take, for example, the styles required to make images scal to fit the size of their container: <b>max-width: 100%.</b> That's it! </p>
                     </section>
 
                     <section class="col-sm-12 col-lg-4">
                         <header>
-                            <h3>Consulting</h3>
+                            <h3>Media Queries</h3>
                         </header>
                         <p>Media queries <b>apply different styles based on characteristics of the browser:</b> its width, whether it is vertically or horizontally oriented, its resolution, and more. They are what make it possible to send a one-column layout to small screens and a multicolumn layout to larger screens on the fly.</p>
                     </section>
@@ -70,30 +74,34 @@
             </div>
         </section>
 
-        <section id="work"> <!--text align center-->
-            <div class="wrapper">
-                <header>
-                    <h2>Works</h2><!--inline-block,padding,border-bottom-->
-                </header>
+        <section id="work" class="wrapper">
 
-                <div class="row col-center">
-                    <div class="col-sm-12 col-lg-8">
-                        <p>A breakpoint is the point at which we use a media query to introduce a style change. We tend to base our breakpoints on the common device sizes</p>
-                    </div>
+            <header>
+                <h2>Works</h2>
+            </header>
+
+            <div class="row col-center">
+                <div class="col-sm-12 col-md-10">
+                    <p>A breakpoint is the point at which we use a media query to introduce a style change. We tend to base our breakpoints on the common device sizes</p>
                 </div>
             </div>
+
         </section>
     </main>
-    <footer id="contact"> <!--background color, border top-->
+    <footer id="contact">
         <div class="wrapper row">
-            <div class="col-sm-12 col-lg-3">
-                <img src="img/logo-brandi.jpg" alt="Brandi">
+            <div class="col-sm-12 col-md-8 col-lg-4">
+                <img src="img/logo-brandi.png" alt="Brandi" data-rjs="2">
                 <p>Mobile-first is when we start by writing our CSS for mobile devices and then use media queries to add in styling for larger screen sizes. When we style for desktop, we're adding widths, columns, and moving things around. We're adding complexity. Mobile layouts tend to be very simple, making it very easy to start there.</p>
 
-                <ul><!--display inline-block-->
-                    <li><b>Email:</b><a href="mailto:hello@gmail.com">hello@email.com</a></li>
-                    <li><b>Phone:</b><a href="tel:+18001234567">800-123-4567</a></li>
-                </ul>
+                <address>
+                    <ul>
+                        <li><b>Email:</b><a href="mailto:hello@gmail.com">hello@email.com</a></li>
+                        <li>&#x2022;</li>
+                        <li><b>Phone:</b><a href="tel:+18001234567">800-123-4567</a></li>
+                    </ul>
+                </address>
+                
             </div>
         </div>
     </footer>
@@ -101,7 +109,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
-    <script src="js/retina.js"></script>
+    <script src="js/functions.js"></script>
 
 </body>
 </html>
