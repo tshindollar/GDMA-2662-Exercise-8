@@ -8,12 +8,17 @@
 3.0 - Generic: reset and/or normalize styles, box-sizing definition, etc. 
 4.0 - Elements: styling for bare/generic HTML elements 
         - Typography: Headings, Paragraphs, Blockquotes, Anchors, Lists, Color
+        - Image
+        - Anchor 
 5.0 - Objects: class-based selectors which define undecorated design patterns, building blocks
         - Framework
 6.0 - Components: specific designed components
+        - Home 
+        - Features
+        - Work
+        - Footer
 7.0 - Utilities: utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
         - Alignment
-        - Screenreader
 --------------------------------------------------------------*/
 
 
@@ -43,16 +48,12 @@ html {
     4.0 - ELEMENTS
 -------------------------------------------------------------- */
 
-h1,
-#home p:last-child {
-    font-weight: 400;
-}
-
 /* ----- TYPOGRAPHY ----- */ 
 
 h1 {
     font-size: 3rem;
     margin: 2.5em 0 .1em;
+    font-weight: 400;
 }
 
 h2  {
@@ -77,11 +78,6 @@ p {
     line-height: 1.7em;
     margin: 0;
     color: #717982;
-}
-
-#features .wrapper > header,
-#work {
-    text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -116,6 +112,30 @@ p {
     }
 }
 
+/* ----- IMAGE ----- */
+
+img {
+    width: 6.25rem;
+    padding: 0;
+}
+
+@media screen and (min-width: 1024px) {
+    img {
+        width: 6.5rem;
+    }
+}
+
+/* ----- ANCHOR ----- */
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 3px;
+}
 
 /*--------------------------------------------------------------
     5.0 - OBJECTS
@@ -248,7 +268,6 @@ p {
     .col-md-12 {
         width: calc(100% * 12 / 12);
     }
-    
 }
 
 
@@ -314,10 +333,8 @@ p {
 
 #home,
 #home p,
-nav a,
 footer,
-footer p,
-footer a  {
+footer p {
     color: #fff;
 }
 
@@ -344,18 +361,31 @@ footer li {
     display: inline-block;
 }
 
+#features .wrapper > header,
+#work,
+#home  {
+    text-align: center;
+}
+
+#home p,
+#home span {
+    font-weight: 300;
+}
+
+
 /* ----- HOME ----- */
 
 #home {
-    text-align: center;
     background-color: #104F41;
+    padding-top: 1px;
 }
 
-/* #home div {
+#home > div:first-child {
     position: fixed;
     top: 0;
     left: 0;
-} */
+    width: 100%;
+}
 
 #home div:first-child {
     background-color: #10443F;
@@ -364,24 +394,19 @@ footer li {
 #home p {
     font-size: 1.5rem;
     margin: 0 0 .5em;
-    font-weight: 300;
 }
 
 #home p:last-child {
     font-size: 1.2rem;
     margin-bottom: 4em;
+    font-weight: 400;
 }
 
 nav li {
     padding: 0 15px;
 }
 
-nav a {
-    text-decoration: none;
-}
-
 #home span {
-    font-weight: 300;
     color: #1EA78D;
 }
 
@@ -522,10 +547,6 @@ footer li {
     padding-right: 5px;
 }
 
-footer a {
-    text-decoration: none;
-}
-
 footer div {
     margin: 3em 0;
 }
@@ -534,30 +555,8 @@ footer div {
     7.0 - UTILITY
 -------------------------------------------------------------- */
 
-/* ----- LOGO ----- */
-
-img {
-    width: 6.25em;
-    padding: 0;
-}
-
 /* ----- ALIGNMENT ----- */
 
 .col-center {
     justify-content: center;
-}
-
-/* ----- SCREENREADER ----- */
-
-.sr-only {
-    position: absolute;
-      position: absolute !important;
-      width: 1px !important;
-      height: 1px !important;
-      padding: 0 !important;
-      margin: -1px !important;
-      overflow: hidden !important;
-      clip: rect(0,0,0,0) !important;
-      white-space: nowrap !important;
-      border: 0 !important;
 }
